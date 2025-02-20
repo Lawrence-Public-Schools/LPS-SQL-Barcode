@@ -34,14 +34,15 @@ tags as (
 )
 
 -- Main query
-select st.student_number,
-st.last_name, 
-st.first_name,
-US.homeroom_teacher,
-st.home_room,
-st.grade_level,
-oB || 'div class=' || dQ || 'libre-barcode-39-regular-LPS' || dQ || cB || '*' || st.student_number || '*' || oB || '/div' || cB as Barcode
--- translates to: < class="libre-barcode-39-regular-LPS">*st.student_number*</div>
+select 
+    st.student_number,
+    st.last_name, 
+    st.first_name,
+    US.homeroom_teacher,
+    st.home_room,
+    st.grade_level,
+    oB || 'div class=' || dQ || 'libre-barcode-39-regular-LPS' || dQ || cB || '*' || st.student_number || '*' || oB || '/div' || cB as Barcode
+    -- translates to: < class="libre-barcode-39-regular-LPS">*st.student_number*</div>
 
 from students st
 left join U_def_ext_students US ON st.dcid=us.studentsdcid
