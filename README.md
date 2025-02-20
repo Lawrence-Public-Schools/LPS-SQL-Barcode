@@ -1,3 +1,4 @@
+> 📌 Not a PLUG-IN, storing Queries here for future version control
 # LPS-SQL-Barcode
 
 ### Same Process for "Current Selection Report"
